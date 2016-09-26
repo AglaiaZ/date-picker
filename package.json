@@ -1,0 +1,27 @@
+{
+  "name": "date-picker",
+  "version": "1.0.0",
+  "description": "Date picker component for AngularJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AglaiaZ/date-picker.git"
+  },
+  "keywords": [
+    "Date",
+    "picker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AglaiaZ/date-picker/issues"
+  },
+  "homepage": "https://github.com/AglaiaZ/date-picker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}
