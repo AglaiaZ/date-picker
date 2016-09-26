@@ -1,0 +1,53 @@
+<div class="form-group">
+    <div class="input-group dropdown">
+        <span class="input-group-addon btn" ng-click="date.prev()">
+            <i class="fa fa-chevron-left"></i>
+        </span>
+        <input style="background:#fff;" type="text" readonly class="form-control dropdown-toggle" data-toggle="dropdown" value="{{date.dateRange | dateRange}}">
+        <ul class="dropdown-menu">
+            <li><a ng-click="date.selectDateRange(1)">今天</a></li>
+            <li>
+                <a ng-click="date.selectDateRange(2)">过去7天</a>
+            </li>
+            <li>
+                <a ng-click="date.selectDateRange(3)">过去30天</a>
+            </li>
+            <li>
+                <a href="javascript:;" 
+                   ng-click="date.selectDateRange(6)">上个月</a>
+            </li>
+            <li uib-dropdown>
+                <a href="javascript:;">
+                    指定一天 <i class="fa fa-caret-right"></i>
+                </a>
+                <div ng-click="$event.preventDefault();$event.stopPropagation()">
+                    <div style="width:192px;" 
+                         date-picker="dates.today"
+                         view="date" 
+                         min-view="date"
+                         ng-click="date.selectDateRange(4, dates.today)"></div>
+                </div>                    
+            </li>
+            <li uib-dropdown>
+                <a href="javascript:;">
+                    时间段 <i class="fa fa-caret-right"></i>
+                </a>
+                <div style="width:388px;" ng-click="$event.preventDefault();$event.stopPropagation();date.selectDateRange(5, startDate, endDate)" >
+                    <div style="width:192px; float:left;" 
+                         date-picker="startDate"
+                         view="date" 
+                         min-view="date"
+                         ng-init="startDate=date.nowDate"></div>
+                    <div style="width:192px; float:left;"
+                         date-picker="endDate"
+                         view="date" 
+                         min-view="date"
+                         ng-init="endDate=date.nowDate"></div>
+                </div>
+            </li>
+        </ul>
+        <span class="input-group-addon btn" ng-click="date.next()">
+            <i class="fa fa-chevron-right"></i>
+        </span>
+    </div>                     
+</div>
